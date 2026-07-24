@@ -21,15 +21,12 @@
                 extend: {
                     colors: {
                         brand: {
-                            navy: '#0B2545',
+                            navy: '#022D71',
                             blue: '#0F4C81',
-                            lightBlue: '#EBF3FA',
-                            mint: '#0EA5E9',
-                            emerald: '#10B981',
-                            rose: '#D81B60',
-                            roseBg: '#FCE4EC',
-                            roseLight: '#FDF2F8',
-                            roseBorder: '#F8BBD0',
+                            green: '#8CC63E',
+                            greenLight: '#F3F9EB',
+                            greenBorder: '#D2EAAC',
+                            orange: '#FF9A00',
                             warmBg: '#FAFAF9'
                         }
                     },
@@ -45,18 +42,35 @@
     <style>
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #F1F5F9; }
-        ::-webkit-scrollbar-thumb { background: #0F4C81; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb { background: #022D71; border-radius: 4px; }
         .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
     </style>
 </head>
 <body class="font-sans text-slate-800 bg-brand-warmBg antialiased">
 
+    <!-- PRELOADER WITH LOGO -->
+    <div id="preloader" class="fixed inset-0 z-50 bg-white flex flex-col items-center justify-center transition-opacity duration-500">
+        <div class="relative flex flex-col items-center gap-4">
+            <div class="relative flex items-center justify-center">
+                <div class="absolute w-28 h-28 rounded-full border-2 border-brand-green/30 animate-ping"></div>
+                <div class="w-24 h-24 rounded-full bg-brand-greenLight flex items-center justify-center p-3 border border-brand-greenBorder shadow-md">
+                    <img src="../images/logo.svg" alt="Vita Care Logo" class="h-10 w-auto animate-pulse">
+                </div>
+            </div>
+            <div class="flex items-center gap-2 text-brand-navy font-bold text-xs tracking-widest uppercase">
+                <span class="w-2 h-2 rounded-full bg-brand-green animate-bounce"></span>
+                <span class="w-2 h-2 rounded-full bg-brand-orange animate-bounce [animation-delay:0.2s]"></span>
+                <span class="w-2 h-2 rounded-full bg-brand-navy animate-bounce [animation-delay:0.4s]"></span>
+            </div>
+        </div>
+    </div>
+
     <!-- ANNOUNCEMENT BAR -->
-    <div class="bg-gradient-to-r from-brand-rose via-pink-600 to-brand-rose text-white text-xs sm:text-sm py-2.5 px-4 text-center">
+    <div class="bg-gradient-to-r from-brand-navy via-blue-900 to-brand-navy text-white text-xs sm:text-sm py-2.5 px-4 text-center border-b border-brand-green/30">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
             <span class="w-full text-center font-medium">
                 100% Private Treatment Rooms & Dedicated Female Practitioners | 
-                <button onclick="openBookingModal()" class="ml-2 bg-white text-brand-rose px-3 py-1 rounded-full font-bold uppercase text-[11px] hover:bg-pink-50 transition-colors">
+                <button onclick="openBookingModal()" class="ml-2 bg-brand-orange hover:bg-amber-500 text-white px-3.5 py-1 rounded-full font-bold uppercase text-[11px] transition-colors">
                     BOOK NOW
                 </button>
             </span>
@@ -64,58 +78,38 @@
     </div>
 
     <!-- MAIN HEADER -->
-    <header class="sticky top-0 z-40 glass-nav border-b border-pink-100">
+    <header class="sticky top-0 z-40 glass-nav border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <a href="../index.html" class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-brand-rose text-white flex items-center justify-center shadow-md">
-                        <i class="fa-solid fa-heart-pulse text-lg"></i>
-                    </div>
-                    <div>
-                        <span class="text-xl sm:text-2xl font-bold tracking-tight text-brand-navy font-serif block">VITA CARE</span>
-                        <span class="text-[10px] tracking-wider text-brand-rose font-semibold uppercase block -mt-1">Women's Health Physiotherapy</span>
-                    </div>
+                <a href="../index.html" class="flex items-center gap-3 group">
+                    <img src="../images/logo.svg" alt="Vita Care Logo" class="h-11 sm:h-13 w-auto group-hover:scale-105 transition-transform duration-300">
                 </a>
 
-                <nav class="hidden lg:flex items-center gap-7 font-medium text-sm text-slate-700">
-                    <a href="../index.html" class="hover:text-brand-rose transition-colors py-1">Home</a>
-                    <a href="../about.html" class="hover:text-brand-rose transition-colors py-1">About Us</a>
-                    <a href="../services.html" class="text-brand-rose font-bold py-1">Our Services</a>
-                    <a href="../team.html" class="hover:text-brand-rose transition-colors py-1">Our Team</a>
-                    <a href="../faq.html" class="hover:text-brand-rose transition-colors py-1">FAQs</a>
-                    <a href="../blog.html" class="hover:text-brand-rose transition-colors py-1">Blog</a>
-                    <a href="../contact.html" class="hover:text-brand-rose transition-colors py-1">Contact Us</a>
+                <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-slate-700">
+                    <a href="../index.html" class="hover:text-brand-green transition-colors py-1">Home</a>
+                    <a href="../about.html" class="hover:text-brand-green transition-colors py-1">About Us</a>
+                    <a href="../services.html" class="text-brand-navy font-bold py-1 border-b-2 border-brand-green">Our Services</a>
+                    <a href="../team.html" class="hover:text-brand-green transition-colors py-1">Our Team</a>
+                    <a href="../faq.html" class="hover:text-brand-green transition-colors py-1">FAQs</a>
+                    <a href="../blog.html" class="hover:text-brand-green transition-colors py-1">Blog</a>
+                    <a href="../contact.html" class="hover:text-brand-green transition-colors py-1">Contact Us</a>
                 </nav>
 
                 <div class="hidden sm:flex items-center gap-4">
-                    <button onclick="openBookingModal()" class="bg-brand-rose hover:bg-pink-700 text-white px-5 py-2.5 rounded-full font-semibold text-sm shadow-md transition-all">
+                    <button onclick="openBookingModal()" class="bg-brand-green hover:bg-emerald-600 text-white px-6 py-2.5 rounded-full font-semibold text-sm shadow-md transition-all">
                         Book Session
                     </button>
                 </div>
-
-                <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-700 hover:text-brand-rose">
-                    <i class="fa-solid fa-bars text-xl"></i>
-                </button>
             </div>
-        </div>
-
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 px-4 pt-4 pb-6 space-y-3">
-            <a href="../index.html" class="block py-2 text-slate-700 font-medium border-b border-slate-50">Home</a>
-            <a href="../about.html" class="block py-2 text-slate-700 font-medium border-b border-slate-50">About Us</a>
-            <a href="../services.html" class="block py-2 text-brand-rose font-bold border-b border-slate-50">Our Services</a>
-            <a href="../team.html" class="block py-2 text-slate-700 font-medium border-b border-slate-50">Our Team</a>
-            <a href="../faq.html" class="block py-2 text-slate-700 font-medium border-b border-slate-50">FAQs</a>
-            <a href="../blog.html" class="block py-2 text-slate-700 font-medium border-b border-slate-50">Blog</a>
-            <a href="../contact.html" class="block py-2 text-slate-700 font-medium border-b border-slate-50">Contact Us</a>
         </div>
     </header>
 
     <!-- SERVICE HERO -->
-    <section class="bg-gradient-to-b from-brand-roseBg via-white to-brand-warmBg py-16 sm:py-20 border-b border-pink-100">
+    <section class="bg-gradient-to-b from-brand-greenLight/60 via-white to-brand-warmBg py-16 sm:py-20 border-b border-brand-green/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-7 space-y-6">
-                    <span class="text-xs font-bold uppercase tracking-wider text-brand-rose bg-pink-100 px-3.5 py-1 rounded-full border border-pink-200">
+                    <span class="text-xs font-bold uppercase tracking-wider text-brand-navy bg-brand-greenLight px-3.5 py-1 rounded-full border border-brand-green/30">
                         Specialized Clinical Service
                     </span>
                     <h1 class="text-3xl sm:text-5xl font-bold text-brand-navy font-serif leading-tight">
@@ -124,14 +118,9 @@
                     <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
                         Dedicated diagnosis, biofeedback, and hands-on therapy for bladder leakage, pelvic organ prolapse, pelvic pain, and postpartum core recovery.
                     </p>
-                    <div class="flex flex-wrap gap-4 pt-2">
-                        <button onclick="openBookingModal()" class="bg-brand-rose hover:bg-pink-700 text-white px-7 py-3.5 rounded-full font-bold text-xs shadow-md transition-all">
-                            BOOK PRIVATE CONSULTATION
-                        </button>
-                        <a href="../contact.html" class="bg-white border border-slate-200 hover:border-brand-rose text-slate-700 px-6 py-3.5 rounded-full font-bold text-xs transition-all">
-                            CLINIC LOCATIONS
-                        </a>
-                    </div>
+                    <button onclick="openBookingModal()" class="bg-brand-orange hover:bg-amber-500 text-white px-7 py-3.5 rounded-full font-bold text-xs shadow-md transition-all">
+                        BOOK PRIVATE CONSULTATION
+                    </button>
                 </div>
                 <div class="lg:col-span-5">
                     <img src="../assets/services_womens_health.png" alt="Pelvic Health Physio" class="rounded-3xl shadow-lg border-4 border-white w-full h-80 sm:h-96 object-cover">
@@ -140,111 +129,26 @@
         </div>
     </section>
 
-    <!-- DETAILED SERVICE OVERVIEW & BENEFITS -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-            
-            <div class="max-w-3xl space-y-4">
-                <h2 class="text-3xl font-bold text-brand-navy font-serif">Understanding Pelvic Floor Health</h2>
-                <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
-                    The pelvic floor is a vital hammock of muscles supporting your bladder, uterus, and bowel. Pregnancy, childbirth, hormonal shifts, or high-impact stress can cause muscle weakness or hypertonicity (over-tightness).
-                </p>
-                <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
-                    Our university-trained female physiotherapists perform discrete assessments in soundproof private rooms. Using <strong>Real-Time Ultrasound</strong>, we visualize your pelvic floor activation live on screen to build a personalized strength & relaxation program.
-                </p>
-            </div>
-
-            <!-- Benefits Grid -->
-            <div>
-                <h3 class="text-2xl font-bold text-brand-navy font-serif mb-8">Key Benefits of Pelvic Physiotherapy</h3>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-brand-warmBg p-6 rounded-2xl border border-slate-200 space-y-3">
-                        <div class="w-10 h-10 rounded-xl bg-pink-100 text-brand-rose flex items-center justify-center text-lg font-bold">✓</div>
-                        <h4 class="font-bold text-brand-navy font-serif">Incontinence Control</h4>
-                        <p class="text-slate-600 text-xs leading-relaxed">Eliminates stress & urge urinary leakage when coughing, laughing, or exercising.</p>
-                    </div>
-
-                    <div class="bg-brand-warmBg p-6 rounded-2xl border border-slate-200 space-y-3">
-                        <div class="w-10 h-10 rounded-xl bg-pink-100 text-brand-rose flex items-center justify-center text-lg font-bold">✓</div>
-                        <h4 class="font-bold text-brand-navy font-serif">Prolapse Support</h4>
-                        <p class="text-slate-600 text-xs leading-relaxed">Non-surgical management strategies to reduce pelvic heaviness & organ prolapse symptoms.</p>
-                    </div>
-
-                    <div class="bg-brand-warmBg p-6 rounded-2xl border border-slate-200 space-y-3">
-                        <div class="w-10 h-10 rounded-xl bg-pink-100 text-brand-rose flex items-center justify-center text-lg font-bold">✓</div>
-                        <h4 class="font-bold text-brand-navy font-serif">Pain Relief</h4>
-                        <p class="text-slate-600 text-xs leading-relaxed">Treats chronic pelvic pain, hypertonic pelvic floor tightness, and vaginismus comfortably.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Treatment Process -->
-            <div class="bg-brand-warmBg p-8 sm:p-12 rounded-3xl border border-slate-200 space-y-8">
-                <h3 class="text-2xl font-bold text-brand-navy font-serif">Your 4-Step Clinical Pathway</h3>
-                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-xs">
-                    <div class="space-y-2">
-                        <span class="text-brand-rose font-bold text-base">Step 01</span>
-                        <h4 class="font-bold text-slate-800">Private Consultation</h4>
-                        <p class="text-slate-600">In-depth discussion of symptoms & health history in a private room.</p>
-                    </div>
-                    <div class="space-y-2">
-                        <span class="text-brand-rose font-bold text-base">Step 02</span>
-                        <h4 class="font-bold text-slate-800">Ultrasound Feedback</h4>
-                        <p class="text-slate-600">Non-invasive ultrasound scan to see muscle contractility live.</p>
-                    </div>
-                    <div class="space-y-2">
-                        <span class="text-brand-rose font-bold text-base">Step 03</span>
-                        <h4 class="font-bold text-slate-800">Manual Therapy</h4>
-                        <p class="text-slate-600">Gentle hands-on therapy and muscle release techniques.</p>
-                    </div>
-                    <div class="space-y-2">
-                        <span class="text-brand-rose font-bold text-base">Step 04</span>
-                        <h4 class="font-bold text-slate-800">Custom Home Plan</h4>
-                        <p class="text-slate-600">Tailored pelvic exercises and posture management tools.</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
     <!-- FOOTER -->
     <footer class="bg-white text-slate-600 border-t border-slate-200 py-12 text-center text-xs">
         <div class="max-w-4xl mx-auto px-4 space-y-4">
-            <div class="w-10 h-10 rounded-full bg-brand-rose text-white flex items-center justify-center mx-auto text-lg shadow-xs">
-                <i class="fa-solid fa-heart-pulse"></i>
-            </div>
-            <span class="text-lg font-bold text-brand-navy font-serif block">VITA CARE</span>
-            <p class="text-slate-500">Email: info@vitacarephysio.com.au | Phone: 1300 848 227</p>
-            <p class="text-slate-500">Sydney Clinics: Bankstown • Parramatta • Sydney CBD</p>
+            <img src="../images/logo.svg" alt="Vita Care Logo" class="h-10 w-auto mx-auto">
+            <p class="text-slate-500 pt-2">Email: info@vitacarephysio.com.au | Phone: 1300 848 227</p>
             <div class="pt-4 border-t border-slate-100 text-[11px] text-slate-400">
                 © 2026 Vita Care Women's Health Physiotherapy. All Rights Reserved.
             </div>
         </div>
     </footer>
 
-    <!-- MODAL -->
-    <div id="booking-modal" class="fixed inset-0 z-50 hidden bg-slate-900/70 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 border border-pink-100 shadow-2xl relative">
-            <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-xl font-bold">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            <div class="text-center space-y-2 mb-6">
-                <h3 class="text-2xl font-bold text-brand-navy font-serif">Book Session</h3>
-                <p class="text-xs text-slate-500">Women's Health & Pelvic Physio</p>
-            </div>
-            <form onsubmit="handleModalSubmit(event)" class="space-y-4">
-                <input type="text" required placeholder="Full Name *" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm">
-                <input type="tel" required placeholder="Phone Number *" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm">
-                <button type="submit" class="w-full bg-brand-rose text-white py-3.5 rounded-xl font-bold text-sm shadow-md">CONFIRM BOOKING</button>
-            </form>
-        </div>
-    </div>
-
+    <!-- PRELOADER SCRIPT -->
     <script>
-        const mobileBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.classList.add('opacity-0', 'pointer-events-none');
+                setTimeout(() => { preloader.style.display = 'none'; }, 500);
+            }
+        });
 
         function openBookingModal() { document.getElementById('booking-modal').classList.remove('hidden'); }
         function closeBookingModal() { document.getElementById('booking-modal').classList.add('hidden'); }

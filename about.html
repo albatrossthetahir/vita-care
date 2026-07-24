@@ -25,6 +25,7 @@
                             blue: '#0F4C81',
                             green: '#8CC63E',
                             greenLight: '#F3F9EB',
+                            greenBorder: '#D2EAAC',
                             orange: '#FF9A00',
                             warmBg: '#FAFAF9'
                         }
@@ -46,6 +47,23 @@
     </style>
 </head>
 <body class="font-sans text-slate-800 bg-brand-warmBg antialiased">
+
+    <!-- PRELOADER WITH LOGO -->
+    <div id="preloader" class="fixed inset-0 z-50 bg-white flex flex-col items-center justify-center transition-opacity duration-500">
+        <div class="relative flex flex-col items-center gap-4">
+            <div class="relative flex items-center justify-center">
+                <div class="absolute w-28 h-28 rounded-full border-2 border-brand-green/30 animate-ping"></div>
+                <div class="w-24 h-24 rounded-full bg-brand-greenLight flex items-center justify-center p-3 border border-brand-greenBorder shadow-md">
+                    <img src="images/logo.svg" alt="Vita Care Logo" class="h-10 w-auto animate-pulse">
+                </div>
+            </div>
+            <div class="flex items-center gap-2 text-brand-navy font-bold text-xs tracking-widest uppercase">
+                <span class="w-2 h-2 rounded-full bg-brand-green animate-bounce"></span>
+                <span class="w-2 h-2 rounded-full bg-brand-orange animate-bounce [animation-delay:0.2s]"></span>
+                <span class="w-2 h-2 rounded-full bg-brand-navy animate-bounce [animation-delay:0.4s]"></span>
+            </div>
+        </div>
+    </div>
 
     <!-- ANNOUNCEMENT BAR -->
     <div class="bg-gradient-to-r from-brand-navy via-blue-900 to-brand-navy text-white text-xs sm:text-sm py-2.5 px-4 text-center border-b border-brand-green/30">
@@ -87,19 +105,6 @@
                     <i class="fa-solid fa-bars text-xl"></i>
                 </button>
             </div>
-        </div>
-
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 px-4 pt-4 pb-6 space-y-3">
-            <a href="index.html" class="block py-2 text-slate-700 font-medium border-b border-slate-50">Home</a>
-            <a href="about.html" class="block py-2 text-brand-navy font-bold border-b border-slate-50">About Us</a>
-            <a href="services.html" class="block py-2 text-slate-700 font-medium border-b border-slate-50">Our Services</a>
-            <a href="team.html" class="block py-2 text-slate-700 font-medium border-b border-slate-50">Our Team</a>
-            <a href="faq.html" class="block py-2 text-slate-700 font-medium border-b border-slate-50">FAQs</a>
-            <a href="blog.html" class="block py-2 text-slate-700 font-medium border-b border-slate-50">Blog</a>
-            <a href="contact.html" class="block py-2 text-slate-700 font-medium border-b border-slate-50">Contact Us</a>
-            <button onclick="openBookingModal()" class="w-full bg-brand-green text-white py-3 rounded-full font-semibold text-center mt-2 shadow-md">
-                Schedule Appointment
-            </button>
         </div>
     </header>
 
@@ -171,10 +176,15 @@
         </div>
     </div>
 
+    <!-- PRELOADER SCRIPT -->
     <script>
-        const mobileBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.classList.add('opacity-0', 'pointer-events-none');
+                setTimeout(() => { preloader.style.display = 'none'; }, 500);
+            }
+        });
 
         function openBookingModal() { document.getElementById('booking-modal').classList.remove('hidden'); }
         function closeBookingModal() { document.getElementById('booking-modal').classList.add('hidden'); }
