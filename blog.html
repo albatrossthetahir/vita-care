@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Health Blog & Articles | Vita Care Australia</title>
+    <meta name="description" content="Read expert articles on pelvic floor recovery, perineal massage for birth prep, abdominal separation (DRAM) healing, posture tips, and women's health physiotherapy in Sydney.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#0B2545',
+                            blue: '#0F4C81',
+                            rose: '#D81B60',
+                            roseBg: '#FCE4EC',
+                            warmBg: '#FAFAF9'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-slate-800 bg-brand-warmBg antialiased">
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="bg-gradient-to-r from-brand-rose via-pink-600 to-brand-rose text-white text-xs sm:text-sm py-2.5 px-4 text-center">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <span class="w-full text-center font-medium">
+                Educational Women's Health Hub & Clinical Advice | 
+                <button onclick="openBookingModal()" class="ml-2 bg-white text-brand-rose px-3 py-1 rounded-full font-bold uppercase text-[11px] hover:bg-pink-50 transition-colors">
+                    BOOK NOW
+                </button>
+            </span>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-pink-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-brand-rose text-white flex items-center justify-center shadow-md">
+                        <i class="fa-solid fa-newspaper text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl sm:text-2xl font-bold tracking-tight text-brand-navy font-serif block">VITA CARE</span>
+                        <span class="text-[10px] tracking-wider text-brand-rose font-semibold uppercase block -mt-1">Women's Health Physiotherapy</span>
+                    </div>
+                </a>
+
+                <nav class="hidden lg:flex items-center gap-7 font-medium text-sm text-slate-700">
+                    <a href="index.html" class="hover:text-brand-rose transition-colors py-1">Home</a>
+                    <a href="about.html" class="hover:text-brand-rose transition-colors py-1">About Us</a>
+                    <a href="services.html" class="hover:text-brand-rose transition-colors py-1">Our Services</a>
+                    <a href="team.html" class="hover:text-brand-rose transition-colors py-1">Our Team</a>
+                    <a href="faq.html" class="hover:text-brand-rose transition-colors py-1">FAQs</a>
+                    <a href="blog.html" class="text-brand-rose font-bold py-1">Blog</a>
+                    <a href="contact.html" class="hover:text-brand-rose transition-colors py-1">Contact Us</a>
+                </nav>
+
+                <div class="hidden sm:flex items-center gap-4">
+                    <button onclick="openBookingModal()" class="bg-brand-rose hover:bg-pink-700 text-white px-5 py-2.5 rounded-full font-semibold text-sm shadow-md transition-all">
+                        Schedule Appointment
+                    </button>
+                </div>
+
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-700 hover:text-brand-rose">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 px-4 pt-4 pb-6 space-y-3">
+            <a href="index.html" class="block py-2 text-slate-700 font-medium border-b border-slate-50">Home</a>
+            <a href="about.html" class="block py-2 text-slate-700 font-medium border-b border-slate-50">About Us</a>
+            <a href="services.html" class="block py-2 text-slate-700 font-medium border-b border-slate-50">Our Services</a>
+            <a href="team.html" class="block py-2 text-slate-700 font-medium border-b border-slate-50">Our Team</a>
+            <a href="faq.html" class="block py-2 text-slate-700 font-medium border-b border-slate-50">FAQs</a>
+            <a href="blog.html" class="block py-2 text-brand-rose font-bold border-b border-slate-50">Blog</a>
+            <a href="contact.html" class="block py-2 text-slate-700 font-medium border-b border-slate-50">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- HERO HEADER -->
+    <section class="bg-gradient-to-b from-pink-50 via-white to-brand-warmBg py-16 sm:py-20 border-b border-pink-100">
+        <div class="max-w-4xl mx-auto px-4 text-center space-y-4">
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-rose bg-pink-100 px-4 py-1.5 rounded-full border border-pink-200">
+                Educational Knowledge Hub
+            </span>
+            <h1 class="text-4xl sm:text-5xl font-bold text-brand-navy font-serif">Women's Health Blog</h1>
+            <p class="text-slate-600 text-base max-w-2xl mx-auto leading-relaxed">
+                Evidence-based guides, birth preparation tips, and posture advice written by our senior female physiotherapists.
+            </p>
+        </div>
+    </section>
+
+    <!-- BLOG ARTICLES GRID -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Article 1 -->
+                <div class="bg-brand-warmBg rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80" alt="Perineal Massage Prep" class="w-full h-48 object-cover">
+                        <div class="p-6 space-y-3">
+                            <span class="text-[10px] font-bold text-brand-rose bg-pink-100 px-2.5 py-1 rounded-full uppercase">Birth Preparation</span>
+                            <h3 class="text-xl font-bold text-brand-navy font-serif">How to Prepare For Birth With Perineal Massage</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed">
+                                Gentle perineal massage starting from 34 weeks increases tissue elasticity, dramatically reducing the risk of perineal tears during labor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#" class="text-xs font-bold text-brand-rose hover:underline">Read Full Guide →</a>
+                    </div>
+                </div>
+
+                <!-- Article 2 -->
+                <div class="bg-brand-warmBg rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80" alt="Pelvic Floor Exercises" class="w-full h-48 object-cover">
+                        <div class="p-6 space-y-3">
+                            <span class="text-[10px] font-bold text-brand-blue bg-blue-100 px-2.5 py-1 rounded-full uppercase">Pelvic Health</span>
+                            <h3 class="text-xl font-bold text-brand-navy font-serif">Understanding Your Pelvic Floor: Fact vs Fiction</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed">
+                                Are standard Kegels safe for hypertonic pelvic floors? Learn why seeing a specialist physio is crucial for custom pelvic floor training.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#" class="text-xs font-bold text-brand-rose hover:underline">Read Full Guide →</a>
+                    </div>
+                </div>
+
+                <!-- Article 3 -->
+                <div class="bg-brand-warmBg rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80" alt="Postnatal Core Recovery" class="w-full h-48 object-cover">
+                        <div class="p-6 space-y-3">
+                            <span class="text-[10px] font-bold text-emerald-700 bg-emerald-100 px-2.5 py-1 rounded-full uppercase">Postpartum Rehab</span>
+                            <h3 class="text-xl font-bold text-brand-navy font-serif">Healing Abdominal Separation (DRAM) Post-Childbirth</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed">
+                                Discover how real-time ultrasound imaging helps rebuild deep abdominal wall integrity before returning to high-impact gym workouts.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#" class="text-xs font-bold text-brand-rose hover:underline">Read Full Guide →</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white text-slate-600 border-t border-slate-200 py-12 text-center text-xs">
+        <div class="max-w-4xl mx-auto px-4 space-y-4">
+            <span class="text-lg font-bold text-brand-navy font-serif block">VITA CARE</span>
+            <p class="text-slate-500">Email: info@vitacarephysio.com.au | Phone: 1300 848 227</p>
+            <div class="pt-4 border-t border-slate-100 text-[11px] text-slate-400">
+                © 2026 Vita Care Women's Health Physiotherapy. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+        function openBookingModal() { window.location.href = 'contact.html'; }
+    </script>
+</body>
+</html>

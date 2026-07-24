@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Ultrasound Biofeedback | Vita Care Australia</title>
+    <meta name="description" content="Real-Time Ultrasound Imaging Biofeedback in Sydney. Non-invasive visual assessment of pelvic floor and core muscles for accurate physiotherapy rehabilitation.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#0B2545',
+                            blue: '#0F4C81',
+                            purple: '#7C3AED',
+                            rose: '#D81B60',
+                            warmBg: '#FAFAF9'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-slate-800 bg-brand-warmBg antialiased">
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="bg-gradient-to-r from-purple-700 via-indigo-700 to-purple-700 text-white text-xs sm:text-sm py-2.5 px-4 text-center">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <span class="w-full text-center font-medium">
+                100% Non-Invasive Real-Time Ultrasound Biofeedback | 
+                <button onclick="openBookingModal()" class="ml-2 bg-white text-purple-700 px-3 py-1 rounded-full font-bold uppercase text-[11px] hover:bg-purple-50 transition-colors">
+                    BOOK ULTRASOUND
+                </button>
+            </span>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="../index.html" class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-purple-600 text-white flex items-center justify-center shadow-md">
+                        <i class="fa-solid fa-ultrasound text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl sm:text-2xl font-bold tracking-tight text-brand-navy font-serif block">VITA CARE</span>
+                        <span class="text-[10px] tracking-wider text-purple-600 font-semibold uppercase block -mt-1">Women's Health Physiotherapy</span>
+                    </div>
+                </a>
+
+                <nav class="hidden lg:flex items-center gap-7 font-medium text-sm text-slate-700">
+                    <a href="../index.html" class="hover:text-purple-600 transition-colors py-1">Home</a>
+                    <a href="../about.html" class="hover:text-purple-600 transition-colors py-1">About Us</a>
+                    <a href="../services.html" class="text-purple-600 font-bold py-1">Our Services</a>
+                    <a href="../team.html" class="hover:text-purple-600 transition-colors py-1">Our Team</a>
+                    <a href="../faq.html" class="hover:text-purple-600 transition-colors py-1">FAQs</a>
+                    <a href="../blog.html" class="hover:text-purple-600 transition-colors py-1">Blog</a>
+                    <a href="../contact.html" class="hover:text-purple-600 transition-colors py-1">Contact Us</a>
+                </nav>
+
+                <div class="hidden sm:flex items-center gap-4">
+                    <button onclick="openBookingModal()" class="bg-purple-600 hover:bg-purple-700 text-white px-5 py-2.5 rounded-full font-semibold text-sm shadow-md transition-all">
+                        Book Session
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="bg-gradient-to-b from-purple-50 via-white to-brand-warmBg py-16 sm:py-20 border-b border-purple-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-xs font-bold uppercase tracking-wider text-purple-700 bg-purple-100 px-3.5 py-1 rounded-full border border-purple-200">
+                        Advanced Diagnostic Technology
+                    </span>
+                    <h1 class="text-3xl sm:text-5xl font-bold text-brand-navy font-serif leading-tight">
+                        Real-Time Ultrasound Biofeedback
+                    </h1>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        Watch your deep core and pelvic floor muscles work live on screen. A completely non-invasive visual biofeedback technique that ensures perfect exercise execution.
+                    </p>
+                    <button onclick="openBookingModal()" class="bg-purple-600 hover:bg-purple-700 text-white px-7 py-3.5 rounded-full font-bold text-xs shadow-md transition-all">
+                        BOOK ULTRASOUND ASSESSMENT
+                    </button>
+                </div>
+                <div class="lg:col-span-5">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" alt="Ultrasound Biofeedback" class="rounded-3xl shadow-lg border-4 border-white w-full h-80 sm:h-96 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white text-slate-600 border-t border-slate-200 py-12 text-center text-xs">
+        <div class="max-w-4xl mx-auto px-4 space-y-4">
+            <span class="text-lg font-bold text-brand-navy font-serif block">VITA CARE</span>
+            <p class="text-slate-500">Email: info@vitacarephysio.com.au | Phone: 1300 848 227</p>
+            <div class="pt-4 border-t border-slate-100 text-[11px] text-slate-400">
+                © 2026 Vita Care Women's Health Physiotherapy. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div id="booking-modal" class="fixed inset-0 z-50 hidden bg-slate-900/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 border border-purple-100 shadow-2xl relative">
+            <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-slate-400 font-bold">✕</button>
+            <h3 class="text-2xl font-bold text-brand-navy font-serif text-center mb-4">Book Real-Time Ultrasound</h3>
+            <form onsubmit="handleModalSubmit(event)" class="space-y-4">
+                <input type="text" required placeholder="Full Name *" class="w-full px-4 py-2 rounded-xl border text-sm">
+                <input type="tel" required placeholder="Phone Number *" class="w-full px-4 py-2 rounded-xl border text-sm">
+                <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-xl font-bold text-sm">CONFIRM BOOKING</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openBookingModal() { document.getElementById('booking-modal').classList.remove('hidden'); }
+        function closeBookingModal() { document.getElementById('booking-modal').classList.add('hidden'); }
+        function handleModalSubmit(e) { e.preventDefault(); closeBookingModal(); alert('Booking request submitted successfully!'); }
+    </script>
+</body>
+</html>

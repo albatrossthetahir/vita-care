@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Our Team | Vita Care Women's Health Physiotherapy</title>
+    <meta name="description" content="Meet our experienced female physiotherapists at Vita Care Australia. AHPRA registered, APA members, specialized in pelvic health, pregnancy care, and spine biomechanics.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#022D71',
+                            blue: '#0F4C81',
+                            green: '#8CC63E',
+                            greenLight: '#F3F9EB',
+                            orange: '#FF9A00',
+                            warmBg: '#FAFAF9'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-slate-800 bg-brand-warmBg antialiased">
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="bg-gradient-to-r from-brand-navy via-blue-900 to-brand-navy text-white text-xs sm:text-sm py-2.5 px-4 text-center border-b border-brand-green/30">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <span class="w-full text-center font-medium">
+                Meet Our 100% Female Clinical Team | 
+                <button onclick="openBookingModal()" class="ml-2 bg-brand-orange hover:bg-amber-500 text-white px-3.5 py-1 rounded-full font-bold uppercase text-[11px] transition-colors">
+                    BOOK NOW
+                </button>
+            </span>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="images/logo.svg" alt="Vita Care Logo" class="h-11 sm:h-13 w-auto group-hover:scale-105 transition-transform duration-300">
+                </a>
+
+                <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-slate-700">
+                    <a href="index.html" class="hover:text-brand-green transition-colors py-1">Home</a>
+                    <a href="about.html" class="hover:text-brand-green transition-colors py-1">About Us</a>
+                    <a href="services.html" class="hover:text-brand-green transition-colors py-1">Our Services</a>
+                    <a href="team.html" class="text-brand-navy font-bold py-1 border-b-2 border-brand-green">Our Team</a>
+                    <a href="faq.html" class="hover:text-brand-green transition-colors py-1">FAQs</a>
+                    <a href="blog.html" class="hover:text-brand-green transition-colors py-1">Blog</a>
+                    <a href="contact.html" class="hover:text-brand-green transition-colors py-1">Contact Us</a>
+                </nav>
+
+                <div class="hidden sm:flex items-center gap-4">
+                    <button onclick="openBookingModal()" class="bg-brand-green hover:bg-emerald-600 text-white px-6 py-2.5 rounded-full font-semibold text-sm shadow-md transition-all">
+                        Schedule Appointment
+                    </button>
+                </div>
+
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-700 hover:text-brand-green">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 px-4 pt-4 pb-6 space-y-3">
+            <a href="index.html" class="block py-2 text-slate-700 font-medium border-b border-slate-50">Home</a>
+            <a href="about.html" class="block py-2 text-slate-700 font-medium border-b border-slate-50">About Us</a>
+            <a href="services.html" class="block py-2 text-slate-700 font-medium border-b border-slate-50">Our Services</a>
+            <a href="team.html" class="block py-2 text-brand-navy font-bold border-b border-slate-50">Our Team</a>
+            <a href="faq.html" class="block py-2 text-slate-700 font-medium border-b border-slate-50">FAQs</a>
+            <a href="blog.html" class="block py-2 text-slate-700 font-medium border-b border-slate-50">Blog</a>
+            <a href="contact.html" class="block py-2 text-slate-700 font-medium border-b border-slate-50">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- PAGE HERO HEADER -->
+    <section class="bg-gradient-to-b from-brand-greenLight/60 via-white to-brand-warmBg py-16 sm:py-20 border-b border-brand-green/20">
+        <div class="max-w-4xl mx-auto px-4 text-center space-y-4">
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-navy bg-brand-greenLight px-4 py-1.5 rounded-full border border-brand-green/30">
+                AHPRA Registered & Experienced
+            </span>
+            <h1 class="text-4xl sm:text-5xl font-bold text-brand-navy font-serif">Meet Our Specialist Team</h1>
+            <p class="text-slate-600 text-base max-w-2xl mx-auto leading-relaxed">
+                Empathetic, highly trained female physiotherapists dedicated to your health, privacy, and full physical recovery.
+            </p>
+        </div>
+    </section>
+
+    <!-- TEAM MEMBERS GRID -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Member 1 -->
+                <div class="bg-brand-warmBg rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all">
+                    <img src="assets/about_team.png" alt="Dr. Mariam Al-Hassan" class="w-full h-80 object-cover object-top">
+                    <div class="p-6 space-y-4">
+                        <div>
+                            <span class="text-xs font-bold text-brand-navy bg-brand-greenLight px-3 py-1 rounded-full border border-brand-green/30">Lead Women's Health Specialist</span>
+                            <h3 class="text-2xl font-bold text-brand-navy font-serif mt-2">Dr. Mariam Al-Hassan</h3>
+                            <p class="text-xs text-slate-500 font-medium">B.Physio (Hons), APA Women's Health Member</p>
+                        </div>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            Over 12 years of specialized clinical experience in pelvic floor rehabilitation, incontinence, and perineal birth preparation. Fluent in English & Arabic.
+                        </p>
+                        <button onclick="openBookingModal('Dr. Mariam Al-Hassan')" class="w-full bg-brand-green text-white py-3 rounded-xl font-bold text-xs">
+                            BOOK WITH DR. MARIAM
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="bg-brand-warmBg rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all">
+                    <img src="assets/services_womens_health.png" alt="Aisha Farooq" class="w-full h-80 object-cover object-top">
+                    <div class="p-6 space-y-4">
+                        <div>
+                            <span class="text-xs font-bold text-brand-navy bg-brand-lightBlue px-3 py-1 rounded-full border border-blue-200">Musculoskeletal Lead</span>
+                            <h3 class="text-2xl font-bold text-brand-navy font-serif mt-2">Aisha Farooq</h3>
+                            <p class="text-xs text-slate-500 font-medium">M.Physio (Musculoskeletal), Dry Needling Cert.</p>
+                        </div>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            Specializes in spine biomechanics, sciatica decompression, chronic lower back pain, and joint realignment.
+                        </p>
+                        <button onclick="openBookingModal('Aisha Farooq')" class="w-full bg-brand-navy text-white py-3 rounded-xl font-bold text-xs">
+                            BOOK WITH AISHA
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="bg-brand-warmBg rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all">
+                    <img src="assets/hero_clinic.png" alt="Sarah Jenkins" class="w-full h-80 object-cover object-top">
+                    <div class="p-6 space-y-4">
+                        <div>
+                            <span class="text-xs font-bold text-brand-orange bg-brand-orangeLight px-3 py-1 rounded-full border border-amber-200">Postpartum & Pilates Physio</span>
+                            <h3 class="text-2xl font-bold text-brand-navy font-serif mt-2">Sarah Jenkins</h3>
+                            <p class="text-xs text-slate-500 font-medium">B.Ex.Sci, M.Physio, APPI Pilates Instructor</p>
+                        </div>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            Passionate about Clinical Pilates, abdominal separation (DRAM) core recovery, and safe post-pregnancy fitness routines.
+                        </p>
+                        <button onclick="openBookingModal('Sarah Jenkins')" class="w-full bg-brand-orange text-white py-3 rounded-xl font-bold text-xs">
+                            BOOK WITH SARAH
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white text-slate-600 border-t border-slate-200 py-12 text-center text-xs">
+        <div class="max-w-4xl mx-auto px-4 space-y-4">
+            <img src="images/logo.svg" alt="Vita Care Logo" class="h-10 w-auto mx-auto">
+            <p class="text-slate-500 pt-2">Email: info@vitacarephysio.com.au | Phone: 1300 848 227</p>
+            <div class="pt-4 border-t border-slate-100 text-[11px] text-slate-400">
+                © 2026 Vita Care Women's Health Physiotherapy. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div id="booking-modal" class="fixed inset-0 z-50 hidden bg-slate-900/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 border border-brand-green/30 shadow-2xl relative">
+            <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-slate-400 font-bold">✕</button>
+            <h3 class="text-2xl font-bold text-brand-navy font-serif text-center mb-4">Book Practitioner Consultation</h3>
+            <form onsubmit="handleModalSubmit(event)" class="space-y-4">
+                <input type="text" required placeholder="Full Name *" class="w-full px-4 py-2 rounded-xl border text-sm">
+                <input type="tel" required placeholder="Phone Number *" class="w-full px-4 py-2 rounded-xl border text-sm">
+                <button type="submit" class="w-full bg-brand-green text-white py-3 rounded-xl font-bold text-sm">CONFIRM BOOKING</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+        function openBookingModal() { document.getElementById('booking-modal').classList.remove('hidden'); }
+        function closeBookingModal() { document.getElementById('booking-modal').classList.add('hidden'); }
+        function handleModalSubmit(e) { e.preventDefault(); closeBookingModal(); alert('Booking request submitted successfully!'); }
+    </script>
+</body>
+</html>
