@@ -263,13 +263,15 @@
         </div>
     </div>
 
-    <!-- PRELOADER HIDE SCRIPT -->
+    <!-- PRELOADER HIDE SCRIPT (2 Second Display) -->
     <script>
         window.addEventListener('load', () => {
             const preloader = document.getElementById('preloader');
             if (preloader) {
-                preloader.classList.add('opacity-0', 'pointer-events-none');
-                setTimeout(() => { preloader.style.display = 'none'; }, 500);
+                setTimeout(() => {
+                    preloader.classList.add('opacity-0', 'pointer-events-none');
+                    setTimeout(() => { preloader.style.display = 'none'; }, 500);
+                }, 2000);
             }
         });
 
